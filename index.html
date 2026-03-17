@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arooba Jahangir | VIP Portfolio</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="dotCanvas"></canvas>
+
+    <nav class="navbar">
+        <div class="logo">ARO<span>OBA.</span></div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#journey">Journey</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-frame" data-aos="fade-up">
+            <div class="hero-content">
+                <h3>GRAPHIC DESIGNER & WEB DEVELOPER</h3>
+                <h1>AROOBA<br><span class="red-text">JAHANGIR</span></h1>
+                <p class="hero-tag">2026 | BEST SELECTED DESIGN | CS STUDENT</p>
+                <div class="hero-btn-group">
+                    <a href="#contact" class="btn-primary">Hire Me</a>
+                    <a href="#projects" class="btn-outline">My Work</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="pic.png" alt="Arooba Profile"> </div>
+        </div>
+    </section>
+
+    <section class="about-sec" id="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">ABOUT <span class="red-text">ME</span></h2>
+            <div class="line-dec"></div>
+            <div class="about-grid">
+                <div class="about-text" data-aos="fade-up">
+                    <p class="lead">Bridging the gap between Code and Creativity.</p>
+                    <p>Main <strong>Arooba Jahangir</strong> hoon, aik Computer Science student aur passionate designer. Mera focus hamesha aise digital solutions banane par hota hai jo na sirf functional hon balki dekhne mein bhi "VIP" aur modern lagun.</p>
+                    <p>Web Development mein HTML/CSS aur Android mein apps banane ke sath-sath, main Graphic Design mein bhi maharat rakhti hoon, jo mujhe dusre developers se unique banata hai.</p>
+                </div>
+                <div class="about-stats" data-aos="fade-left">
+                    <div class="stat-box"><h3>HTML/CSS</h3><span>95%</span></div>
+                    <div class="stat-box"><h3>Design</h3><span>90%</span></div>
+                    <div class="stat-box"><h3>C# / Android</h3><span>80%</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="journey-sec" id="journey">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">MY <span class="red-text">JOURNEY</span></h2>
+            <div class="line-dec"></div>
+            
+            <div class="journey-wrapper">
+                <div class="journey-card" data-aos="fade-right">
+                    <div class="j-icon"><i class="fas fa-school"></i></div>
+                    <div class="j-text">
+                        <h3>Matric & FSc</h3>
+                        <p>KRL Model College for Girls</p>
+                        <span class="j-badge">Foundation</span>
+                    </div>
+                </div>
+
+                <div class="journey-card highlight" data-aos="fade-left">
+                    <div class="j-icon"><i class="fas fa-university"></i></div>
+                    <div class="j-text">
+                        <h3>Undergraduate (BSCS)</h3>
+                        <p>Graduating from KICSIT</p>
+                        <span class="j-badge">Current Goal</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-sec" id="projects">
+        <div class="container">
+            <h2 class="section-title">RECENT <span class="red-text">PROJECTS</span></h2>
+            <div class="line-dec"></div>
+            <div class="project-grid">
+                <div class="p-card" data-aos="zoom-in">
+                    <i class="fas fa-hospital-alt"></i>
+                    <h3>Hospital Management</h3>
+                    <p>A smart portal for health records.</p>
+                </div>
+                <div class="p-card" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-brain"></i>
+                    <h3>Migraine Tracker</h3>
+                    <p>Android app for symptom tracking.</p>
+                </div>
+                <div class="p-card current" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-truck-moving"></i>
+                    <h3>Fleet Management</h3>
+                    <p>C# System (Work in Progress)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-sec" id="contact">
+        <div class="container">
+            <h2>LET'S CONNECT</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> aroobajahangir19@gmail.com</p>
+                <p><i class="fas fa-phone"></i> 03429692640</p>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        // Moving Dots Animation Logic
+        const canvas = document.getElementById('dotCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let dots = [];
+        for (let i = 0; i < 70; i++) {
+            dots.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                vx: (Math.random() - 0.5) * 1.5,
+                vy: (Math.random() - 0.5) * 1.5,
+                size: Math.random() * 3 + 1
+            });
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#bc5e54';
+            dots.forEach(d => {
+                ctx.beginPath();
+                ctx.arc(d.x, d.y, d.size, 0, Math.PI * 2);
+                ctx.fill();
+                d.x += d.vx; d.y += d.vy;
+                if (d.x < 0 || d.x > canvas.width) d.vx *= -1;
+                if (d.y < 0 || d.y > canvas.height) d.vy *= -1;
+            });
+            requestAnimationFrame(draw);
+        }
+        draw();
+    </script>
+</body>
+</html>
